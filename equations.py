@@ -10,7 +10,7 @@ def exponent (x):
         i+=1
     return result
 
-def Ln(x):
+def ln(x):
     y_n=x-1.0
     y_n1= y_n + 2 * (x-exponent(y_n))/(x+exponent(y_n))
     while( abss(y_n-y_n1)>0.001):
@@ -25,7 +25,7 @@ def abss(x):
 
 def XtimesY(x,y):
     if(x>=0):
-        return  float('%0.6f' % exponent(y*Ln(x)))
+        return  float('%0.6f' % exponent(y*ln(x)))
     return 0.0
 def sqrt(x,y):
     return XtimesY(y,1/x)
@@ -33,7 +33,7 @@ def sqrt(x,y):
 def calculate(x):
     answer= exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x)
     return answer
-    
+  
 x= input("enter a x:")
 try: 
     x= float(x)
@@ -46,7 +46,6 @@ except:
 
 #print(XtimesY(x,y))
 #print(sqrt(x, y)) 
-
 
 
 
